@@ -1,0 +1,98 @@
+# 🏀 Sports Buddy
+
+**Sports Buddy** is a web application that helps users discover and organize sports events near them. It supports user registration, login, event creation, and admin controls like managing cities, areas, and categories.
+
+---
+
+## 🌐 Live Demo
+
+> 🔗 [Add your Firebase Hosting URL here after deploying]
+
+---
+
+## 🚀 Features
+
+### 👤 Users
+- Register and login securely
+- Add sports events with city, area, date/time, and category
+- View all upcoming events
+- Edit or delete their added events
+
+### 👨‍💼 Admins
+- Login as admin
+- Add/update:
+  - Sports categories
+  - Cities
+  - Areas
+
+---
+
+## 🧰 Technologies Used
+
+- **HTML5, CSS3, JavaScript (ES6+)**
+- **Firebase Authentication**
+- **Firebase Firestore (Database)**
+- **Firebase Hosting**
+
+---
+
+## 📦 Folder Structure
+
+project-root/
+│
+├── index.html # Main HTML file
+├── style.css # Styling
+├── javascript.js # Main logic and Firebase integration
+├── firebaseConfig.js # Firebase project config
+└── README.md # Project instructions and documentation
+
+Make sure your Firebase project is set up:
+
+Go to Firebase Console
+
+Create a new project
+
+Enable Authentication (Email/Password)
+
+Create Cloud Firestore
+
+Replace Firebase config in firebaseConfig.js with your project credentials.
+
+Open index.html in your browser and test.
+
+
+Firebase Hosting Deployment
+Install Firebase CL
+
+npm install -g firebase-tools
+Login to Firebase
+
+firebase login
+Initialize Firebase
+
+firebase init
+Choose:
+
+Hosting
+
+Select your Firebase project
+
+Set public directory as .
+
+Say No to SPA rewrite
+
+Deploy
+
+firebase deploy
+
+Project Evaluation Criteria
+✅ Modular, testable, maintainable, portable code
+
+✅ Proper Firebase integration for Auth and Firestore
+
+✅ Logging via console.log() and alerts
+
+✅ Public GitHub repository with documentation
+
+✅ Firebase-hosted project with working demo
+

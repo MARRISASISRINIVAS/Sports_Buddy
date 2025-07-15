@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sports Buddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sports Buddy</h1>
+    <p>Find and create sports events near you!</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Registration Form -->
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" id="regName" placeholder="Name" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPassword" placeholder="Password" required>
+      <select id="regRole" required>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+
+    <!-- Login Form -->
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- User Section -->
+    <div id="userSection" style="display: none;">
+      <h2>Add Sports Event</h2>
+      <form id="eventForm">
+        <input type="text" id="eventName" placeholder="Event Name" required>
+        <input type="text" id="eventCity" placeholder="City" required>
+        <input type="text" id="eventArea" placeholder="Area" required>
+        <input type="datetime-local" id="eventTime" required>
+        <input type="text" id="eventCategory" placeholder="Category (e.g., Football, Cricket)" required>
+        <button type="submit">Add Event</button>
+      </form>
+
+      <h3>Upcoming Sports Events</h3>
+      <div id="eventsList"></div>
+    </div>
+
+    <!-- Admin Section -->
+    <div id="adminSection" class="admin-section" style="display: none;">
+      <h2>Admin Panel</h2>
+
+      <h3>Add Sports Category</h3>
+      <form id="adminCategoryForm">
+        <input type="text" id="newCategory" placeholder="Category Name" required>
+        <button type="submit">Add Category</button>
+      </form>
+
+      <h3>Add City</h3>
+      <form id="adminCityForm">
+        <input type="text" id="newCity" placeholder="City Name" required>
+        <button type="submit">Add City</button>
+      </form>
+
+      <h3>Add Area</h3>
+      <form id="adminAreaForm">
+        <input type="text" id="newArea" placeholder="Area Name" required>
+        <input type="text" id="areaCity" placeholder="City for this Area" required>
+        <button type="submit">Add Area</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="firebaseConfig" type="module"></script>
+  <script src="javascript" type="module"></script>
+
+</body>
+</html>
